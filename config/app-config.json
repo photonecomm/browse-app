@@ -10,7 +10,7 @@
 		}
 	},
 	"env_helloworld_api": {
-		"url": "/search/v1/api",
+		"url": "/helloworld",
 		"timeout": {
 			"server": 1000,
 			"client": 1000,

@@ -3,7 +3,7 @@ import { renderToString } from "react-dom/server";
 
 import { commonAPI as app, startServer } from "../util/ExpressJSUtils.js";
 import { configManagerObj } from "../util/ConfigManager.js";
-var QueryManager = require("../svc/QueryManager");
+import { httpGet } from "../util/HttpRequest";
 
 import App from "./components/app/app";
 
@@ -20,8 +20,11 @@ app.get(healthInfoURL, function(req, res) {
 
 const pageURL = "/page";
 app.get(pageURL, function(req, res) {
-	console.log(QueryManager);
-	QueryManager.getComponent().then(function(component) {
+	
+
+	console.log(configManagerObj.env_api["server"].url+ configManagerObj.env_helloworld_api.url,"ER")
+	httpGet(configManagerObj.env_api["server"].url+ configManagerObj.env_helloworld_api.url)
+		.then(function(component) {
 		
 		let htmlString = renderToString(<App />);
 		res.send(`
