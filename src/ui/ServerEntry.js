@@ -29,7 +29,6 @@ app.get(pageURL, function(req, res) {
 			</head>
 			<body>
 				${htmlString}
-				${component.data}
 			</body>
 		</html>
 	`);
