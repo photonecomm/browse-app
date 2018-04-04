@@ -29,3 +29,4 @@ Run Functional test(Headless):
 1. npm install
 2. npm run e2e-start (Will start the webdriver)
 3. npm run e2e-test
+Example : ENV_FUNCTIONAL_TEST_URL=http://52.186.66.18:8080 npm run e2e-start
