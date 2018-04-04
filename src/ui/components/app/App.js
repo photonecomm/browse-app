@@ -1,4 +1,3 @@
-/** (c) Walgreen Co. All rights reserved.**/
 import React, { Component } from 'react';
 
 export default class App extends Component {
