@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: browseapp
+  namespace: default
+  labels:
+    app: browse
+    parent: dotcom
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: browse
+      parent: dotcom
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: browse
+        parent: dotcom
+        tier: frontend
+    spec:
+      containers:
+      - name: browse
+        image: phnueopsacrl01.azurecr.io/dotcom/browse-app
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: browse-app-config
+
