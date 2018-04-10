@@ -40,7 +40,7 @@ app.get(pageURL, function(req, res) {
 				<!DOCTYPE html>
 				<html lang="en">
 					<head>
-						<title>Browse App</title>
+						<title>Browse App Testing</title>
 					</head>
 					<body>
 						${htmlString}
