@@ -1,0 +1,10 @@
+config:
+  target: 'https://www.google.com'
+  phases:
+    - duration: 1
+      arrivalRate: 1
+scenarios:
+  - flow:
+    - get:
+        url: "/search/results.jsp?Ntt=shampoo"
+        
