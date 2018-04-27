@@ -6,5 +6,5 @@ config:
 scenarios:
   - flow:
     - get:
-        url: "/search/results.jsp?Ntt=shampoo"
+        url: "/store/c/free-%26-clear-shampoo/ID=prod6055613-product"
         
