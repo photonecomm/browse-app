@@ -1,9 +1,0 @@
-config:
-  target: 'https://www.walgreens.com'
-  phases:
-    - duration: 1
-      arrivalRate: 1
-scenarios:
-  - flow:
-    - get:
-        url: "/store/c/free-%26-clear-shampoo/ID=prod6055613-product"
