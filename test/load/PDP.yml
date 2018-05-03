@@ -1,5 +1,7 @@
 config:
   target: 'https://104.211.24.52:5001'
+  tls:
+      rejectUnauthorized: false
   phases:
     - duration: 1
       arrivalRate: 1
