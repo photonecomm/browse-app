@@ -1,15 +1,8 @@
 {
     "browsertime": {
         "iterations": 1,
-		"timeouts":{
-		"browserStart":120000
-	    },
-		"browser": "firefox",
-        "connectivity": {
-            "profile": "3gfast"
-        },
-        "xvfb": true,
-        },
+		"browser": "firefox"
+        }
     "outputFolder": "test/performance/reports/sitespeed.io/",
     "mobile": false
 }
