@@ -1,9 +1,6 @@
 {
   "browsertime": {
     "iterations": 1,
-    "video": true,
-    "speedIndex": true,
-    "browser": "chrome",
     "connectivity": {
       "profile": "3gfast"
     },
