@@ -12,9 +12,5 @@
         }
     },
     "outputFolder": "test/performance/reports/sitespeed.io/",
-    "mobile": false,
-    "budget": {
-        "configPath": "test/performance/budget.json",
-        "output": "tap"
-    }
+    "mobile": false
 }
