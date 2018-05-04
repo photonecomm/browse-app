@@ -1,6 +1,9 @@
 {
     "browsertime": {
         "iterations": 1,
+		"timeouts":{
+		"browserStart":120000
+	    },
         "connectivity": {
             "profile": "3gfast"
         },
