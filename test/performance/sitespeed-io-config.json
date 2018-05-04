@@ -4,7 +4,7 @@
         "connectivity": {
             "profile": "3gfast"
         },
-        "xvfb": true,
+        "xvfb": false,
         "chrome": {
             "args": [
                 "no-sandbox"
