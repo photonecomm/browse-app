@@ -1,16 +1,9 @@
-{
-    "browsertime": {
-        "iterations": 1,
-        "connectivity": {
-            "profile": "3gfast"
-        },
-        "xvfb": true,
-        "chrome": {
-            "args": [
-                "no-sandbox"
-            ]
-        }
-    },
-    "outputFolder": "test/performance/reports/sitespeed.io/",
-    "mobile": false
+{  
+   "browsertime":{  
+      "iterations":1,
+	   "video":true,
+	   "speedIndex":true
+   },
+   "outputFolder":"test/performance/reports/sitespeed.io/",
+   "mobile":false
 }
