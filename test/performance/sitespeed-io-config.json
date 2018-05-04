@@ -1,8 +1,8 @@
 {
     "browsertime": {
         "iterations": 1,
-		"browser": "firefox"
-        }
+		"browser": "chrome"
+        },
     "outputFolder": "test/performance/reports/sitespeed.io/",
     "mobile": false
 }
