@@ -1,5 +1,5 @@
 config:
-  target: 'https://104.211.24.52:5001'
+  target: 'https://m-perf.walgreens.com'
   phases:
     - duration: 60
       arrivalRate: 1
@@ -12,3 +12,4 @@ scenarios:
   - flow:
     - get:
         url: "/store/c/free-%26-clear-shampoo/ID=prod6055613-product"
+
