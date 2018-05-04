@@ -1,13 +1,13 @@
 config:
-  target: 'https://104.211.24.52:5001'
-  tls:
-      rejectUnauthorized: false
+  target: 'https://www.walgreens.com'
   phases:
     - duration: 60
       arrivalRate: 1
-  phases:
-    - duration: 120
-      arrivalRate: 10
+      name: "Test-arrivalCount"
+    - duration: 100  
+      arrivalRate: 1
+      rampTo: 3
+      name: "Test-rampTo"
 scenarios:
   - flow:
     - get:
