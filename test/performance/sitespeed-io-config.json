@@ -1,16 +1,20 @@
 {
-  "browsertime": {
-    "iterations": 1,
-    "connectivity": {
-      "profile": "3gfast"
+    "browsertime": {
+        "iterations": 1,
+        "connectivity": {
+            "profile": "3gfast"
+        },
+        "xvfb": true,
+        "chrome": {
+            "args": [
+                "no-sandbox"
+            ]
+        }
     },
-    "xvfb": true,
-    "chrome": {
-      "args": [
-        "no-sandbox"
-      ]
+    "outputFolder": "test/performance/reports/sitespeed.io/",
+    "mobile": false,
+    "budget": {
+        "configPath": "test/performance/budget.json",
+        "output": "tap"
     }
-  },
-  "outputFolder": "test/performance/reports/sitespeed.io/",
-  "mobile": false
 }
