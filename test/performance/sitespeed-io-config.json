@@ -1,7 +1,6 @@
 {
     "browsertime": {
         "iterations": 1,
-		"video": true,
         "connectivity": {
             "profile": "3gfast"
         },
@@ -13,9 +12,6 @@
         }
     },
     "outputFolder": "test/performance/reports/sitespeed.io/",
-    "mobile": false,
-    "budget": {
-        "configPath": "test/performance/budget.json",
-        "output": "tap"
-    }
+    "mobile": false"
+    
 }
