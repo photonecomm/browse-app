@@ -3,11 +3,11 @@ config:
   tls:
       rejectUnauthorized: false
   phases:
+    - duration: 60
+      arrivalRate: 1
+  phases:
     - duration: 120
       arrivalRate: 10
-  phases:
-    - duration: 60
-      arrivalRate: 25
 scenarios:
   - flow:
     - get:
