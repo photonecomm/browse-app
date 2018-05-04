@@ -1,6 +1,9 @@
 {
     "browsertime": {
         "iterations": 1,
+        "connectivity": {
+            "profile": "3gfast"
+        },
         "xvfb": true,
         "chrome": {
             "args": [
@@ -9,5 +12,9 @@
         }
     },
     "outputFolder": "test/performance/reports/sitespeed.io/",
-    "mobile": false
+    "mobile": false,
+    "budget": {
+        "configPath": "test/performance/budget.json",
+        "output": "tap"
+    }
 }
