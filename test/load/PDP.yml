@@ -4,7 +4,7 @@ config:
       rejectUnauthorized: false
   phases:
     - duration: 60
-      arrivalRate: 20
+      arrivalRate: 100
 scenarios:
   - flow:
     - get:
