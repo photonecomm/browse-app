@@ -1,9 +1,6 @@
 {
     "browsertime": {
         "iterations": 1,
-        "connectivity": {
-            "profile": "3gfast"
-        },
         "xvfb": true,
         "chrome": {
             "args": [
