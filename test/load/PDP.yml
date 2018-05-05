@@ -7,7 +7,7 @@ config:
       prefix: 'artillery'
   payload:
       # path is relative to the location of the test script
-      path: "./productslist.csv"
+      path: ".test/load/productslist.csv"
       fields:
         - "productid"
   phases:
