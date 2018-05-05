@@ -1,15 +1,31 @@
 config:
-  target: 'https://m-perf.walgreens.com'
+  target: 'https://104.211.24.52:5001'
+  plugins:
+    statsd:
+      host: ''
+      port: 8125
+      prefix: 'artillery'
+  payload:
+      # path is relative to the location of the test script
+      path: "./productslist.csv"
+      fields:
+        - "productid"
   phases:
-    - duration: 60
+    - duration: 5
       arrivalRate: 1
       name: "Test-arrivalCount"
-    - duration: 100  
+    - duration: 60
       arrivalRate: 1
-      rampTo: 3
-      name: "Test-rampTo"
+      rampTo: 10
+      name: "Warm up the application - Rampup"
+    - duration: 120
+      arrivalRate: 20
+      rampTo: 1
+      name: "Sustained max load"
+variables:
+      testurl:
+        - "/store/c/free-%26-clear-shampoo/ID=prod{{productid}}-product"
 scenarios:
   - flow:
     - get:
-        url: "/store/c/free-%26-clear-shampoo/ID=prod6055613-product"
-
+        url: "/store/c/free-%26-clear-shampoo/ID=prod{{productid}}-product"
