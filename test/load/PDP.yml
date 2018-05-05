@@ -1,5 +1,9 @@
 config:
   target: 'https://104.211.24.52:5001'
+  http:
+    tls:
+      rejectUnauthorized: false
+    pool: 10 # All HTTP requests from all virtual users will be sent over the same 10 connections
   plugins:
     statsd:
       host: ''
@@ -7,24 +11,23 @@ config:
       prefix: 'artillery'
   payload:
       # path is relative to the location of the test script
-      path: "productslist.csv"
+      path: "./productslist.csv"
       fields:
         - "productid"
   phases:
-    - duration: 5
-      arrivalRate: 1
-      name: "Test-arrivalCount"
-    - duration: 60
-      arrivalRate: 1
-      rampTo: 10
-      name: "Warm up the application - Rampup"
-    - duration: 120
+    - duration: 300
       arrivalRate: 20
-      rampTo: 1
+      name: "Test-arrivalCount"
+    - duration: 600
+      arrivalRate: 10
+      rampTo: 20
+      name: "Warm up the application - Rampup"
+    - duration: 600
+      arrivalRate: 30
       name: "Sustained max load"
-variables:
+  variables:
       testurl:
-        - "/store/c/free-%26-clear-shampoo/ID=prod{{productid}}-product"
+        - "/"
 scenarios:
   - flow:
     - get:
