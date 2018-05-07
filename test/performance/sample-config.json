@@ -10,7 +10,7 @@
                 "no-sandbox"
             ]
         },
-        "video": false
+        "video": true
 	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
     "mobile": false,
