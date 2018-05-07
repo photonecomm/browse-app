@@ -5,11 +5,7 @@
             "profile": "3gfast"
         },
         "xvfb": true,
-        "chrome": {
-            "args": [
-                "no-sandbox"
-            ]
-        },
+        "browser": "chrome",
         "video": true
 	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
