@@ -4,10 +4,13 @@
         "connectivity": {
             "profile": "3gfast"
         },
-        "xvfb": true,
-        "browser": "chrome",
-		"video": true
-    },
+       "xvfb": true,
+       "chrome": {
+            "args": [
+                "no-sandbox"
+            ]
+        }
+	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
     "mobile": false,
     "budget": {
