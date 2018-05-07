@@ -6,7 +6,7 @@
         },
         "xvfb": false,
         "browser": "chrome",
-        "video": true
+        "video": false
 	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
     "mobile": false,
