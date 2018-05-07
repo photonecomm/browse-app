@@ -4,8 +4,12 @@
         "connectivity": {
             "profile": "3gfast"
         },
-        "xvfb": false,
-        "browser": "chrome",
+        "xvfb": true,
+        "chrome": {
+            "args": [
+                "no-sandbox"
+            ]
+        },
         "video": false
 	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
