@@ -1,62 +1,24 @@
 {
-  "browsertime.pageSummary": [{
-    "metric": "statistics.timings.firstPaint.median",
-    "max": 1000
-    }, 
-    {
-    "metric": "statistics.visualMetrics.FirstVisualChange.median",
-    "max": 1000
-  },
- {
-    "metric": "statistics.timings.fullyLoaded.score",
-    "max": 1000
-  },
-   {
-    "metric": "statistics.timings.SpeedIndex",
-    "max": 1000
-  },
-{
-    "metric": "statistics.timings.userTimings",
-    "max": 1000
-  },
-  {
-    "metric": "statistics.visualMetrics.LastVisualChange.median",
-    "max": 1000
-  }],
-  "coach.pageSummary": [{
-    "metric": "advice.performance.score",
-    "min": 75
-  }, {
-    "metric": "advice.info.domElements",
-    "max": 200
-  }, {
-    "metric": "advice.info.domDepth.max",
-    "max": 10
-  }, {
-    "metric": "advice.info.iframes",
-    "max": 0
-  }, {
-    "metric": "advice.info.pageCookies.max",
-    "max": 5
-  }],
+  "browsertime.pageSummary": [],
+  "coach.pageSummary": [],
   "pagexray.pageSummary": [  {
     "metric": "missingCompression",
     "max": 0
   },
   {
     "metric": "statistics.timings.SpeedIndex",
-    "max": 1000
+    "max": 3000
   },
   {
     "metric": "contentTypes.css.requests",
-    "max": 1
+    "max": 10
   },
   {
     "metric": "contentTypes.js.requests",
-    "max": 1
+    "max": 10
   },
   {
     "metric": "contentTypes.image.requests",
-    "max": 1
+    "max": 120
   }]
 }
