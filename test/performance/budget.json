@@ -39,23 +39,24 @@
     "metric": "advice.info.pageCookies.max",
     "max": 5
   }],
-  "pagexray.pageSummary": [{
-    "metric": "transferSize",
-    "max": 100000
-  }, {
-    "metric": "requests",
-    "max": 60
-  }, {
+  "pagexray.pageSummary": [  {
     "metric": "missingCompression",
     "max": 0
-  }, {
+  },
+  {
+    "metric": "statistics.timings.SpeedIndex",
+    "max": 1000
+  },
+  {
     "metric": "contentTypes.css.requests",
     "max": 1
-  }, {
-    "metric": "contentTypes.image.transferSize",
-    "max": 100000
-  },{
-    "metric": "documentRedirects",
-    "max":0
+  },
+  {
+    "metric": "contentTypes.js.requests",
+    "max": 1
+  },
+  {
+    "metric": "contentTypes.image.requests",
+    "max": 1
   }]
 }
