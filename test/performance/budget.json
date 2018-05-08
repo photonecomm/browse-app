@@ -1,5 +1,8 @@
 {
-  "browsertime.pageSummary": [],
+  "browsertime.pageSummary": [{
+	  "metric":"statistics.visualMetrics.SpeedIndex",
+	  "max":1000
+  }],
   "coach.pageSummary": [],
   "pagexray.pageSummary": [  {
     "metric": "missingCompression",
@@ -14,7 +17,7 @@
     "max": 10
   },
   {
-    "metric": "contentTypes.js.requests",
+    "metric": "contentTypes.javascript.requests",
     "max": 10
   },
   {
