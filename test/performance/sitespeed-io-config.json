@@ -1,6 +1,6 @@
 {
     "browsertime": {
-        "iterations": 8,
+        "iterations": 2,
 		"speedIndex" : true,
         "connectivity": {
             "profile": "3gfast"
