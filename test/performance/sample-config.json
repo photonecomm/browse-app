@@ -13,7 +13,7 @@
         "video": true
 	},
     "outputFolder": "test/performance/reports/sitespeed.io/",
-    "mobile": true,
+    "mobile": false,
     "budget": {
         "configPath": "test/performance/budget.json",
         "output": "tap"
