@@ -1,0 +1,29 @@
+config:
+  target: 'https://172.17.43.59:5001'
+  http:
+    tls:
+      rejectUnauthorized: false
+  plugins:
+    statsd:
+      host: ''
+      port: 8125
+      prefix: 'artillery'
+  payload:
+      # path is relative to the location of the test script
+      path: "./productslist.csv"
+      fields:
+        - "productid"
+  phases: # Test will run for 24 hrs with 20 users as arrival rate
+    - duration: 86400
+      arrivalRate: 20 
+      name: "Endurance"
+  variables:
+      testurl:
+        - "/"
+scenarios:
+  - flow:
+    - get:
+        url: "/store/c/free-%26-clear-shampoo/ID=prod{{productid}}-product?reactjs=true"
+    - get:
+        url: "/vpd/v1/products/{{productid}}/(PriceInfo+Inventory+ProductDetails)"
+   
