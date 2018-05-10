@@ -62,8 +62,8 @@ volumes: [
 				try {
 					dir('browse-app') {
 						sh 'npm run build-prod ; npm run pack'
-						sh "docker build --no-cache -f deployment/Dockerfile -t util-app:${env.BUILD_NUMBER} ."
-						sh "docker tag util-app:${env.BUILD_NUMBER} phnueopsacrl01.azurecr.io/dotcom/util-app:${env.BUILD_NUMBER}"
+						sh "docker build --no-cache -f deployment/Dockerfile -t ecomm-app:${env.BUILD_NUMBER} ."
+						sh "docker tag ecomm-app:${env.BUILD_NUMBER} phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
 						sh 'docker login --username=phnueopsacrl01 --password="3n96EcI/prHEJnq1krKWCvlG4UDG+dFH" https://phnueopsacrl01.azurecr.io'
 						sh "docker push phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
 					}
