@@ -1,6 +1,6 @@
 def label = "worker-${UUID.randomUUID().toString()}"
 podTemplate(label: label, containers: [
-  containerTemplate(name: 'nodejs-test', image: 'phnueopsacrl01.azurecr.io/dotcom/nodejs-slave-test:1', command: 'cat', ttyEnabled: true)
+  containerTemplate(name: 'nodejs-test', image: 'phnueopsacrl01.azurecr.io/nodejs-build-slave', command: 'cat', ttyEnabled: true)
 ],
 volumes: [
   hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
