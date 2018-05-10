@@ -75,13 +75,13 @@ volumes: [
 				}
 			}
 
-			stage('Send Success Mail') {
+			/*stage('Send Success Mail') {
 				mail body: "util-app Build Success: ${env.BUILD_URL}" ,
 				from: 'test@test.com',
 				replyTo: 'test@test.com',
 				subject: "util-app Build completed Successfully #${env.BUILD_NUMBER}",
 				to: 'test@test.com'
-			}
+			}*/
 		}
 	}
 }
