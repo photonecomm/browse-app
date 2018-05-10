@@ -1,3 +1,4 @@
+def label = "worker-${UUID.randomUUID().toString()}"
 podTemplate(label: label, containers: [
   containerTemplate(name: 'nodejs-test', image: 'phnueopsacrl01.azurecr.io/dotcom/nodejs-slave-test:1', command: 'cat', ttyEnabled: true)
 ],
