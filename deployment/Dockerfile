@@ -9,7 +9,5 @@ COPY /build/browse-app.zip ${APP_PATH}
 RUN unzip  ${APP_PATH}/browse-app.zip -d ${APP_PATH}
 
 RUN rm -f ${APP_PATH}/browse-app.zip
-RUN npm install -g ffmpeg
 
-EXPOSE 8080
 CMD [ "npm", "run", "start" ]
