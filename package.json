@@ -17,8 +17,8 @@
 		"build-prod": "npm install && npm run webpack",
 		"install-pm2": "npm install pm2 -g",
 		"start-dev": "cross-env ENV_SERVER=local ENV_COMMON_MODULE=true node dist/server-bundle.js",
-		"pm2-start": "ENV_COMMON_MODULE=true pm2 start config/pm2.json --env production",
-		"start": "ENV_COMMON_MODULE=true NODE_ENV=production node dist/server-bundle.js"
+		"pm2-start": "pm2 start config/pm2.json --env production",
+		"start": "NODE_ENV=production node dist/server-bundle.js"
 	},
 	"dependencies": {
 		"axios": "0.15.3",
