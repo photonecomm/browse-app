@@ -12,7 +12,7 @@ node {
 	stage('Configure Dev') {
         try {
 			dir('browse-app') {
-				//sh "kubectl --kubeconfig config -n default apply -f config/env/dev/config.yaml"
+				 sh "kubectl -n spindev apply -f config/env/dev/config.yaml"
 			}
         } catch (exc) {
             currentBuild.result = "FAILURE"
