@@ -1,24 +1,33 @@
-node {
-	properties([
-		[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '10']]
-	])
+def label = "worker-${UUID.randomUUID().toString()}"
+podTemplate(label: label, containers: [
+  containerTemplate(name: 'nodejs-test', image: 'phnueopsacrl01.azurecr.io/nodejs-build-slave', command: 'cat', ttyEnabled: true)
+],
+volumes: [
+  hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
+]) {
+	node(label) {
+		container('nodejs-test') {
+			properties([
+				[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '10']]
+			])
+	     	stage('Clone') {
+				dir('browse-app') {
+					checkout scm
+				}
+			}
 
-	stage('Clone') {
-		dir('browse-app') {
-			checkout scm
+			stage('Configure Dev') {
+				try {
+					dir('browse-app') {
+						 sh "kubectl -n spindev apply -f config/env/dev/config.yaml"
+					}
+				} catch (exc) {
+					currentBuild.result = "FAILURE"
+					throw exc
+				} finally {
+
+				}
+			}
 		}
 	}
-
-	stage('Configure Dev') {
-        try {
-			dir('browse-app') {
-				 sh "kubectl -n spindev apply -f config/env/dev/config.yaml"
-			}
-        } catch (exc) {
-            currentBuild.result = "FAILURE"
-            throw exc
-        } finally {
-
-        }
-    }
 }
