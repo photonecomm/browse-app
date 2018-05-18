@@ -25,7 +25,7 @@ app.get(pageURL, function(req, res) {
 		<!DOCTYPE html>
 		<html lang="en">
 			<head>
-				<title>Browse App Ver1</title>
+				<title>Browse App</title>
 			</head>
 			<body>
 				${htmlString}
@@ -40,7 +40,7 @@ app.get(pageURL, function(req, res) {
 				<!DOCTYPE html>
 				<html lang="en">
 					<head>
-						<title>Browse App New</title>
+						<title>Browse App New version change</title>
 					</head>
 					<body>
 						${htmlString}
