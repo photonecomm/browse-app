@@ -25,7 +25,7 @@ app.get(pageURL, function(req, res) {
 		<!DOCTYPE html>
 		<html lang="en">
 			<head>
-				<title>Browse App v3</title>
+				<title>Browse App</title>
 			</head>
 			<body>
 				${htmlString}
