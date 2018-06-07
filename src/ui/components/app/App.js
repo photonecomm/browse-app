@@ -6,7 +6,7 @@ export default class App extends Component {
 	}
 	render() {
 		return (
-			<div className='app-page'>Browse App</div>
+			<div className='app-page'>Browse App V1</div>
 		);
 	}
 };
