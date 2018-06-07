@@ -19,7 +19,7 @@ volumes: [
 			stage('Configure Dev') {
 				try {
 					dir('browse-app') {
-						 sh "kubectl -n spindev apply -f config/env/staging/config.yaml"
+						 sh "kubectl -n spinuat apply -f config/env/staging/config.yaml"
 					}
 				} catch (exc) {
 					currentBuild.result = "FAILURE"
