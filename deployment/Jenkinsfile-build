@@ -64,7 +64,7 @@ volumes: [
 						sh 'npm run build-prod ; npm run pack'
 						sh "docker build --no-cache -f deployment/Dockerfile -t ecomm-app:${env.BUILD_NUMBER} ."
 						sh "docker tag ecomm-app:${env.BUILD_NUMBER} phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
-						sh 'docker login --username=phnueopsacrl01 --password="3n96EcI/prHEJnq1krKWCvlG4UDG+dFH" https://phnueopsacrl01.azurecr.io'
+						sh 'docker login --username=neugcstieacr01 --password="fYQDKCiuImfahaLM+lQp0FvYS3mqhGDf" https://phnueopsacrl01.azurecr.io'
 						sh "docker push phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
 					}
 				} catch (exc) {
