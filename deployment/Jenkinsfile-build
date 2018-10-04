@@ -63,9 +63,9 @@ volumes: [
 					dir('browse-app') {
 						sh 'npm run build-prod ; npm run pack'
 						sh "docker build --no-cache -f deployment/Dockerfile -t ecomm-app:${env.BUILD_NUMBER} ."
-						sh "docker tag ecomm-app:${env.BUILD_NUMBER} phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
-						sh 'docker login --username=neugcstieacr01 --password="fYQDKCiuImfahaLM+lQp0FvYS3mqhGDf" https://phnueopsacrl01.azurecr.io'
-						sh "docker push phnueopsacrl01.azurecr.io/ecomm-app:${env.BUILD_NUMBER}"
+						sh "docker tag ecomm-app:${env.BUILD_NUMBER} neugcstieacr01.azurecr.io/sample-apps:${env.BUILD_NUMBER}"
+						sh 'docker login --username=neugcstieacr01 --password="fYQDKCiuImfahaLM+lQp0FvYS3mqhGDf" https://neugcstieacr01.azurecr.io/sample-apps'
+						sh "docker push neugcstieacr01.azurecr.io/sample-apps:${env.BUILD_NUMBER}"
 					}
 				} catch (exc) {
 					currentBuild.result = "FAILURE"
